@@ -1,0 +1,78 @@
+.custom-select {
+    width: 250px;
+    height: 60px;
+    background-color: white;
+    cursor: pointer;
+
+}
+
+.select-icon-container span {
+    font-size: 40px;
+    margin: auto;
+    color: rgb(206, 73, 73)
+}
+
+.custom-select-option-container {
+    max-width: 250px;
+    height: 200px;
+    overflow-y: scroll;
+    z-index: 3;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.custom-select-option-container .list-group-item {
+    padding: 0 !important;
+    border: none !important;
+    font-size: 14px;
+    height: 40px;
+    line-height: 22px;
+    padding-left: 10px !important;
+}
+
+.custom-select-option-container li {
+    cursor: pointer;
+}
+
+.custom-select-option-container li:hover {
+    background-color: #cccccc;
+}
+
+.custom-select::after {
+    font-family: "Material Icons" !important;
+    content: "\e5cf" !important;
+    position: absolute;
+    top: 10;
+    right: 10px;
+    transition: transform 0.3s;
+}
+
+.people-close-click.is-open .custom-select::after {
+    transform: rotate(180deg);
+}
+
+.sub-container,
+.add-container {
+    background-color: rgb(23, 33, 92);
+    color: white;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .custom-select {
+        width: 200px;
+        height: 60px;
+        background-color: white;
+        cursor: pointer;
+
+    }
+}

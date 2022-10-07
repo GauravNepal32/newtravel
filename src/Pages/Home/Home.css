@@ -1,0 +1,142 @@
+.landing-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../image/Home/landing.jpg");
+    background-color: #cccccc;
+    height: 82vh;
+    max-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fancy-font {
+    font-family: 'Passions Conflict', cursive;
+    color: rgb(218, 82, 82);
+    font-size: 4em;
+
+}
+
+.landing-text-container {
+    display: grid;
+    place-items: center;
+    place-content: center;
+}
+
+.hook-text {
+    color: white;
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.landing-text-container {
+    line-height: 50px;
+}
+
+.light-text {
+    font-size: 1.4em;
+    color: #cccccc;
+}
+
+.other-way-to-search {
+    position: relative;
+    top: -50px;
+}
+
+.landing-search-container {
+    min-width: 1200px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.search-btn {
+    background-color: rgb(224, 75, 75);
+    width: 100%;
+    height: 60px;
+    color: white;
+    font-weight: bold;
+}
+
+.check-list li::marker {
+    font-family: "Material Icons" !important;
+    content: "\e86c" !important;
+    color: rgb(224, 75, 75);
+}
+
+.check-list li span {
+    margin-left: 10px;
+}
+
+.circle-img {
+    max-width: 500px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.grey-circle {
+    position: absolute;
+    width: 6em;
+    left: 6em;
+    height: 6em;
+    border-radius: 50%;
+    background-color: rgb(245, 240, 213);
+    animation-name: slide-tl;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-delay: 0.6s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+}
+
+
+
+.red-circle {
+    width: 10em;
+    position: absolute;
+    height: 10em;
+    border-radius: 50%;
+    background-color: rgb(224, 75, 75);
+    bottom: 0em;
+    right: 6em;
+    z-index: -1;
+    animation-name: slide-tl;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-delay: 0.6s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+
+}
+
+
+
+@keyframes slide-tl {
+
+    0% {
+        transform: translateY(0) translateX(0px);
+    }
+
+    25% {
+        transform: translateY(-30px) translateX(-30px);
+    }
+
+    100% {
+        transform: translateY(0) translateX(0px);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .landing-search-container {
+        min-width: 1000px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .custom-select {
+        width: 180px;
+        height: 60px;
+        background-color: white;
+        cursor: pointer;
+
+    }
+}
