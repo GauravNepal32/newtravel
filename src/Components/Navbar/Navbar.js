@@ -10,7 +10,7 @@ const Navbar = () => {
             <div className="navbar-top-container">
                 <div className="container py-3 px-md-5">
                     <div className="d-flex justify-content-between">
-                        <div className="d-flex contact-top">
+                        <div className="d-flex contact-top d-md-flex d-none">
                             <div className="d-flex">
                                 <i class="bi bi-telephone-fill"></i>
                                 <p className='ms-3'>9876543210</p>
@@ -36,8 +36,22 @@ const Navbar = () => {
                     <a class="navbar-brand" href="#">
                         <img width={129} height={34} src={logo} alt="" />
                     </a>
-                    <button class="navbar-toggler order-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <div className="outside-navigation-cotnainer order-lg-1 order-0 d-flex ms-auto me-md-4 me-2">
+                        <div className="nav-search-container d-lg-block d-none">
+                            <span class="material-symbols-outlined">
+                                search
+                            </span>
+                        </div>
+                        <div className="profile-container ms-md-4 ms-2">
+                            <span class="material-symbols-outlined">
+                                account_circle
+                            </span>
+                        </div>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="material-symbols-outlined">
+                            menu
+                        </span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav">
@@ -116,18 +130,7 @@ const Navbar = () => {
 
                         </ul>
                     </div>
-                    <div className="outside-navigation-cotnainer d-flex ms-auto me-md-4 me-2">
-                        <div className="search-container">
-                            <span class="material-symbols-outlined">
-                                search
-                            </span>
-                        </div>
-                        <div className="profile-container ms-md-4 ms-2">
-                            <span class="material-symbols-outlined">
-                                account_circle
-                            </span>
-                        </div>
-                    </div>
+
                 </div>
             </nav>
         </div>

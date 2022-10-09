@@ -5,8 +5,8 @@ const Package = () => {
     const totalStars = 5;
     const activeStars = 4;
     return (
-        <div className="rounded">
-            <div className="feature-card-child position-relative">
+        <div className="rounded mx-md-0 mx-auto">
+            <div className="feature-card-child position-relative mx-md-0 mx-auto">
                 <div className="overlay-wrapper">
                     <img className='img-fluid rounded' src={feature} alt="" />
                 </div>

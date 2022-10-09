@@ -16,9 +16,11 @@
 }
 
 .landing-text-container {
+    width: 100%;
     display: grid;
     place-items: center;
     place-content: center;
+
 }
 
 .hook-text {
@@ -42,7 +44,8 @@
 }
 
 .landing-search-container {
-    min-width: 1200px;
+    /* min-width: 1200px; */
+        background-color: white;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -110,6 +113,7 @@
 
 
 
+
 @keyframes slide-tl {
 
     0% {
@@ -127,10 +131,11 @@
 
 @media screen and (max-width: 1200px) {
     .landing-search-container {
-        min-width: 1000px;
+        /* min-width: 1000px; */
         border-radius: 20px;
         overflow: hidden;
     }
+
 
     .custom-select {
         width: 180px;
@@ -138,5 +143,41 @@
         background-color: white;
         cursor: pointer;
 
+    }
+}
+@media screen and (max-width: 550px) {
+    .hook-text {
+        color: white;
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+
+    .fancy-font {
+        font-family: 'Passions Conflict', cursive;
+        color: rgb(218, 82, 82);
+        font-size: 1.9em;
+
+    }
+
+    .light-text {
+        font-size: 1em;
+        color: #cccccc;
+    }
+
+    .circle-img {
+        max-width: 300px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    .red-circle {
+
+        bottom: -1em;
+        right: 1em;
+    }
+
+    .other-way-to-search {
+        position: relative;
+        top: -0px;
     }
 }

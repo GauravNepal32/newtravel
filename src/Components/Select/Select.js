@@ -17,24 +17,34 @@ const Select = () => {
     }, [openOption])
 
     return (
-        <div className={openOption ? "close-click position-absolute is-open" : 'close-click position-absolute'}>
-            <div onClick={() => { setOpenOption(!openOption) }} className="custom-select d-flex align-items-center">
-                <div className="select-icon-container d-flex ps-2 align-items-center">
-                    <span class="material-symbols-outlined">
-                        person_pin_circle
-                    </span>
-                </div>
-                <div className="custom-select-text-container position-relative ms-3 lh-sm">
-                    <div className="custom-placeholder-container text-secondary mb-0">
+        < div className={openOption ? "close-click is-open " : 'close-click'} >
+            <div onClick={() => { setOpenOption(!openOption) }} className="custom-select pt-1">
+                <div className="d-flex justify-content-between align-items-center">
+                    <div className="d-flex align-items-center">
+                        <div className="select-icon-container d-flex ps-2 align-items-center">
+                            <span class="material-symbols-outlined">
+                                person_pin_circle
+                            </span>
+                        </div>
+                        <div className="custom-select-text-container position-relative ms-3 lh-sm">
+                            <div className="custom-placeholder-container text-secondary mb-0">
                         Location
-                    </div>
-                    <div className="selected-option fw-bold mt-0">
+
+                            </div>
+                            <div className="selected-option fw-bold mt-0">
                         {selectedValue}
+
+                            </div>
+                        </div>
+                    </div>
+                    <div className="arrow-container pe-3 fs-6">
+                        <span class="material-symbols-outlined">
+                            expand_more
+                        </span>
                     </div>
                 </div>
-
             </div>
-            <div className={openOption ? 'custom-select-option-container position-relative top-0 d-block mt-1' : 'custom-select-option-container d-none'}>
+            <div className={openOption ? 'custom-select-option-container position-absolute d-block mt-1' : 'custom-select-option-container d-none'}>
                 <ul class="list-group">
                     <li onClick={() => {
                         setSelectedValue('India')
@@ -67,6 +77,7 @@ const Select = () => {
                 </ul>
             </div>
         </div>
+
     )
 }
 

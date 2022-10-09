@@ -9,6 +9,9 @@ import Activity from '../../Components/Activity/Activity'
 import SelectDate from '../../Components/SelectDate/SelectDate'
 import SelectPeople from '../../Components/SelectPeople/SelectPeople'
 import Package from '../../Components/Package/Package'
+import Destination from '../../Components/Destination/Destination'
+import Offer from '../../Components/Offer/Offer'
+import ParallexHome from '../../Components/ParallexHome/ParallexHome'
 
 const Home = () => {
 
@@ -46,25 +49,37 @@ const Home = () => {
                                 <p className="fancy-font text-center mb-0">
                                     Lets Explore
                                 </p>
-                                <p className='hook-text mt-0 mb-0'>Where would you like to go?</p>
+                                <p className='hook-text mt-0 mb-0 text-center'>Where would you like to go?</p>
                                 <p className="light-text text-center mt-2">Checkout beautiful places around the world</p>
                             </div>
-                            <div className="landing-search-container rounded mt-3">
-                                <div className="row row-cols-3 rounded w-100">
-                                    <div className="col p-0">
+                            <div className="landing-search-container p-lg-0 p-2 d-flex flex-wrap justify-content-center rounded m-md-0 m-3 w-100 mt-3">
+                                <div className="row rounded w-100">
+                                    <div className="col-md-5">
+                                        <div className="row row-cols-lg-2 row-cols-1">
+                                            <div className="col">
                                         <Select />
-                                    </div>
-                                    <div className="col p-0">
+
+                                            </div>
+                                            <div className="col">
                                         <Activity />
+
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="col p-0">
-                                        <SelectDate />
+                                    <div className="col-md-5">
+                                        <div className="row row-cols-lg-2 row-cols-1">
+                                            <div className="col">
+                                                <SelectDate />
+
+                                            </div>
+                                            <div className="col">
+                                                <SelectPeople />
+
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="col p-0">
-                                        <SelectPeople />
-                                    </div>
-                                    <div className="col p-0">
-                                        <button className='btn search-btn d-flex justify-content-center align-items-center'>
+                                    <div className="col-md-2 d-flex align-items-center pe-0">
+                                        <button className='btn w-100 my-auto search-btn d-flex justify-content-center align-items-center'>
                                             <span class="material-symbols-outlined me-2">
                                                 search
                                             </span>
@@ -79,8 +94,8 @@ const Home = () => {
                     <SearchSlider />
                 </div>
                 <div className="why-us-container container px-md-5 mb-5">
-                    <div className="row row-cols-md-2 row-cols-1">
-                        <div className="col">
+                    <div className="row row-cols-lg-2 row-cols-1">
+                        <div className="col order-lg-0 order-1">
                             <div className="fancy-font fs-2">
                                 Why Choose Us?
                             </div>
@@ -114,7 +129,7 @@ const Home = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="col text-center position-relative">
+                        <div className="col order-lg-1 order-0 mb-lg-0 mb-4 text-center position-relative">
                             <div className="grey-circle"></div>
                             <img className='img-fluid circle-img' src={scene} alt="" />
                             <div className="red-circle"></div>
@@ -130,7 +145,15 @@ const Home = () => {
                         <Package />
                     </div>
                 </div>
-
+                <div className="top-destination-list container px-md-5 pb-5 mb-5">
+                    <Destination />
+                </div>
+                <div className="our-offer pt-5 mb-5 pb-5">
+                    <Offer />
+                </div>
+                <div className="parallex-home">
+                    <ParallexHome />
+                </div>
             </div>
         </>
     )

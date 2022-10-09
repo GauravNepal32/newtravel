@@ -1,11 +1,16 @@
 .custom-select {
-    width: 250px;
+    width: 270px;
     height: 60px;
     background-color: white;
     cursor: pointer;
 
 }
 
+.people-close-click {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+}
 .select-icon-container span {
     font-size: 40px;
     margin: auto;
@@ -41,16 +46,11 @@
     background-color: #cccccc;
 }
 
-.custom-select::after {
-    font-family: "Material Icons" !important;
-    content: "\e5cf" !important;
-    position: absolute;
-    top: 10;
-    right: 10px;
+.arrow-container span {
+    font-size: 16px;
     transition: transform 0.3s;
 }
-
-.people-close-click.is-open .custom-select::after {
+.people-close-click.is-open .arrow-container span {
     transform: rotate(180deg);
 }
 
@@ -64,15 +64,4 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-@media screen and (max-width: 1200px) {
-
-    .custom-select {
-        width: 200px;
-        height: 60px;
-        background-color: white;
-        cursor: pointer;
-
-    }
 }

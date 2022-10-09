@@ -9,7 +9,7 @@
 }
 
 .nav-item:hover {
-    border-bottom: 3px solid rgb(218, 82, 82);
+    border-bottom: 3px solid #da5252;
 }
 
 .navbar-nav .dropdown:hover .dropdown-menu {
@@ -70,7 +70,7 @@
     color: grey;
 }
 
-.search-container,
+.nav-search-container,
 .profile-container {
     background-color: #faf5ee;
     display: flex;

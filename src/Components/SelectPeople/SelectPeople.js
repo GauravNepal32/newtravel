@@ -24,24 +24,32 @@ const SelectPeople = () => {
     }, [selectedAdultPeople, selectedYouthPeople, selectedChildPeople])
 
     return (
-        <div className={openOption ? "position-absolute people-close-click is-open" : 'position-absolute people-close-click'}>
-            <div onClick={() => { setOpenOption(!openOption) }} className="custom-select d-flex align-items-center">
-                <div className="select-icon-container d-flex ps-2 align-items-center">
-                    <span class="material-symbols-outlined">
-                        group
-                    </span>
-                </div>
-                <div className="custom-select-text-container position-relative ms-3 lh-sm">
-                    <div className="custom-placeholder-container text-secondary mb-0">
-                        Guests
+        <div className={openOption ? " people-close-click is-open" : ' people-close-click'}>
+            <div onClick={() => { setOpenOption(!openOption) }} className="custom-select pt-1">
+                <div className="d-flex justify-content-between align-items-center">
+                    <div className="d-flex align-items-center">
+                        <div className="select-icon-container d-flex ps-2 align-items-center">
+                            <span class="material-symbols-outlined">
+                                group
+                            </span>
+                        </div>
+                        <div className="custom-select-text-container position-relative ms-3 lh-sm">
+                            <div className="custom-placeholder-container text-secondary mb-0">
+                                Guests
+                            </div>
+                            <div className="selected-option fw-bold mt-0">
+                                {selectedPeople}
+                            </div>
+                        </div>
                     </div>
-                    <div className="selected-option fw-bold mt-0">
-                        {selectedPeople}
+                    <div className="arrow-container pe-3 fs-6">
+                        <span class="material-symbols-outlined">
+                            expand_more
+                        </span>
                     </div>
                 </div>
-
             </div>
-            <div className={openOption ? 'custom-select-option-container position-relative top-0 d-block' : 'custom-select-option-container d-none'}>
+            <div className={openOption ? 'custom-select-option-container position-absolute d-block' : 'custom-select-option-container d-none'}>
                 <ul class="list-group">
                     <li className="list-group-item py-3 mt-1">
                         <div className="d-flex justify-content-between">
@@ -105,6 +113,8 @@ const SelectPeople = () => {
                 </ul>
             </div>
         </div>
+
+
     )
 }
 

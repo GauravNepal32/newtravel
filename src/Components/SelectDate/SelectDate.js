@@ -17,24 +17,35 @@ const SelectDate = () => {
     }, [openOption])
 
     return (
-        <div className={openOption ? "position-absolute date-close-click is-open" : 'position-absolute date-close-click'}>
-            <div onClick={() => { setOpenOption(!openOption) }} className="custom-select d-flex align-items-center">
-                <div className="select-icon-container d-flex ps-2 align-items-center">
-                    <span class="material-symbols-outlined">
-                        history
-                    </span>
-                </div>
-                <div className="custom-select-text-container position-relative ms-3 lh-sm">
-                    <div className="custom-placeholder-container text-secondary mb-0">
-                        Duration
-                    </div>
-                    <div className="selected-option fw-bold mt-0">
-                        {selectedDate}
-                    </div>
-                </div>
+        <div className={openOption ? " date-close-click is-open" : ' date-close-click'}>
+            <div onClick={() => { setOpenOption(!openOption) }} className="custom-select pt-1">
+                <div className="d-flex justify-content-between align-items-center">
+                    <div className="d-flex align-items-center">
+                        <div className="select-icon-container d-flex ps-2 align-items-center">
+                            <span class="material-symbols-outlined">
+                                history
 
+                            </span>
+                        </div>
+                        <div className="custom-select-text-container position-relative ms-3 lh-sm">
+                            <div className="custom-placeholder-container text-secondary mb-0">
+                        Duration
+
+                            </div>
+                            <div className="selected-option fw-bold mt-0">
+                        {selectedDate}
+
+                            </div>
+                        </div>
+                    </div>
+                    <div className="arrow-container pe-3 fs-6">
+                        <span class="material-symbols-outlined">
+                            expand_more
+                        </span>
+                    </div>
+                </div>
             </div>
-            <div className={openOption ? 'custom-select-option-container position-relative top-0 d-block mt-1' : 'custom-select-option-container d-none'}>
+            <div className={openOption ? 'custom-select-option-container position-absolute d-block mt-1' : 'custom-select-option-container d-none'}>
                 <ul class="list-group">
                     <li onClick={() => {
                         setSelectedDate('1-7 Days')
